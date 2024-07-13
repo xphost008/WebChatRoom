@@ -1,0 +1,12 @@
+# 忽略一些文件
+bin/
+cgi-bin/
+conf/
+error/
+icons/
+include/
+lib/
+logs/
+manual/
+modules/
+htdocs/.idea/

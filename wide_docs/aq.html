@@ -1,0 +1,95 @@
+<!DOCTYPE HTML>
+<html lang="zh">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>网络聊天室管理员后台</title>
+    <style>
+        body {
+            padding: 0;
+            margin: auto;
+        }
+        table, tr, td, th {
+            border: 2px solid black; /* 这个属性会为每个单元格添加边框 */
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+        #block > thead, tbody tr > td, th {
+            width: 200px;
+            height: 30px;
+        }
+        #block thead tr th, #block tbody td th {
+            width: 200px;
+            height: 30px;
+        }
+        #ban_ip  thead tr th, tbody tbody td th {
+            width: 410px;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div style="width: 150px; height: 150px; left: 10px; top: 10px; position: fixed; background-color: lightgreen">
+        <form action="back.php?password=163895724" method="post">
+            <h3>请尽量通过这里刷新该网页，而不是通过左上角刷新！</h3>
+            <input type="submit" value="刷新">
+        </form>
+    </div>
+    <div style="float: left; height: 800px; width: 800px; background-color: pink; overflow-y: auto">
+        <h1 style="text-align: center">屏蔽词列表</h1>
+        <table id="block" style="margin-left: auto; margin-right: auto">
+            <thead>
+            <tr>
+                <th>屏蔽词</th>
+                <th>替换词</th>
+            </tr>
+            </thead>
+            <tbody id="block_tbody">
+            </tbody>
+        </table>
+        <form action="back.php?password=163895724" method="post">
+            <div style="margin: 0 auto; width: 425px; height: 100px">
+            <label>
+                <input type="text" name="block-word" placeholder="请输入屏蔽词" style="height: 30px; width: 200px;">
+                <input type="text" name="replace-word" placeholder="请输入替换词" style="height: 30px; width: 200px"><br>
+                <input type="submit" value="提交" style="height: 30px; width: 420px">
+            </label>
+            </div>
+        </form>
+    </div>
+    <div style="float: left; height: 800px; width: 800px; background-color: yellow; overflow-y: auto">
+        <h1 style="text-align: center">禁止IP访问</h1>
+        <table id="ban_ip" style="margin-left: auto; margin-right: auto">
+            <thead>
+            <tr>
+                <th>ban ip</th>
+            </tr>
+            </thead>
+            <tbody id="ban_ip_tbody">
+            </tbody>
+        </table>
+        <form action="back.php?password=163895724" method="post">
+            <div style="margin: 0 auto; width: 425px; height: 100px">
+                <label>
+                    <input type="text" name="ban-ip" placeholder="请输入要ban的ip" style="height: 30px; width: 410px;">
+                    <input type="submit" value="提交" style="height: 30px; width: 410px">
+                </label>
+            </div>
+        </form>
+    </div>
+    <div style="float: left; height: 800px; width: 1600px; background-color: skyblue; overflow-y: auto">
+        <h1 style="text-align: center">聊天记录</h1>
+        <table id="chat" style="margin-left: auto; margin-right: auto; font-size: 20px">
+            <thead>
+            <tr style="height: 50px;">
+                <th>名称</th>
+                <th style="width: 400px">内容</th>
+                <th>时间</th>
+                <th>IP</th>
+            </tr>
+            </thead>
+            <tbody id="chat_tbody">
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
