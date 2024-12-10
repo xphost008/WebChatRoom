@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#nav {
+    height: 50px;
+    background-color: gray;
+}
+#personal {
+    float: right;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background-size: 50px 50px;
+    border: 1px solid red;
+    cursor: pointer;
+}
+#content {
+    margin: 20px;
+    height: 600px;
+    background-color: white;
+    border: 3px solid black;
+    border-radius: 20px;
+    overflow: auto;
+    /*overflow-y: auto;*/
+}
+#input {
+    margin: 20px;
+    height: 180px;
+    background-color: white;
+    border: 2px solid white;
+    border-radius: 20px;
+}
+#content-textarea {
+    margin: 20px 20px 0 20px;
+    height: 100px;
+    width: 97%;
+    font-size: 20px;
+}
+#submit-button {
+    margin: 0 20px 20px 20px;
+    height: 30px;
+    width: 97%;
+}
+.dialog-content {
+    margin-left: 10px;
+    margin-top: 15px;
+    display: flex;
+}
+.dialog-content-div {
+    margin-left: 10px;
+    margin-top: 15px;
+}
+.dialog-content-span {
+    background-color: lightblue;
+    border: 1px solid blue;
+    border-radius: 10px;
+    padding: 10px;
+}

@@ -1,37 +1,15 @@
-/**
- * 创建数据库
- */
-create database chat_room;
-use chat_room;
-/**
- * 创建禁止ip
- */
-CREATE TABLE `ban` (
-  `ban_ip` varchar(40) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '黑名单ip'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='黑名单ip';
-/**
- * 创建屏蔽词
- */
-CREATE TABLE `block` (
-  `block_word` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '屏蔽词',
-  `replace` text COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '替换的词'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='屏蔽词列表';
-/**
- * 创建聊天记录存储
- */
-CREATE TABLE `chat` (
-  `name` varchar(16) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL COMMENT '名称',
-  `content` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL COMMENT '内容',
-  `time` datetime NOT NULL,
-  `ip` varchar(40) COLLATE utf8mb4_general_ci NOT NULL COMMENT 'IP地址'
+CREATE TABLE chat
+(
+    avatar  LONGTEXT     NOT NULL COMMENT '头像',
+    name    VARCHAR(50)  NOT NULL COMMENT '名称',
+    content LONGTEXT     NOT NULL COMMENT '内容',
+    time    VARCHAR(40)  NOT NULL COMMENT '日期'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci COMMENT='聊天信息表';
-/**
- * 创建管理员密码
- */
-CREATE TABLE `root_password` (
-  `password` int NOT NULL COMMENT '管理员密码'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='管理员密码';
-/**
- * 添加管理员密码
- */
-INSERT INTO root_password (password) VALUES (163895724);
+
+CREATE TABLE users
+(
+    id       INT         AUTO_INCREMENT PRIMARY KEY COMMENT '用户唯一标识符',
+    username VARCHAR(50) NOT NULL COMMENT '用户名',
+    password VARCHAR(50) NOT NULL COMMENT '用户密码',
+    avatar   LONGTEXT    NOT NULL COMMENT '头像'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci COMMENT='聊天信息表';
