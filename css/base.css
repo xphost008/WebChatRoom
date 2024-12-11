@@ -49,12 +49,13 @@
     display: flex;
 }
 .dialog-content-div {
-    margin-left: 10px;
+    margin-left: 20px;
     margin-top: 15px;
-}
-.dialog-content-span {
+    margin-right: 15px;
+    word-wrap: break-word;
     background-color: lightblue;
     border: 1px solid blue;
     border-radius: 10px;
     padding: 10px;
+    /*width: 93%;*/
 }

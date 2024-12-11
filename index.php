@@ -82,7 +82,7 @@
                             <div style='padding-left: 10px;'>
                                 $name $time
                             </div>
-                            <div class='dialog-content-div'><span class='dialog-content-span'>".unicodeDecode($content)."</span></div>
+                            <div class='dialog-content-div'>".unicodeDecode($content)."</div>
                         </div>
                     </div>
                 ";
