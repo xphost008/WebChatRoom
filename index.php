@@ -75,6 +75,10 @@
             @mysqli_data_seek($result, $row - $l);
             for($i=0; $i<$l; $i++){
                 list($avatar, $name, $content, $time) = mysqli_fetch_row($result);
+                $content = str_replace(" ", "&nbsp;", $content);
+                $content = str_replace("<", "&lt;", $content);
+                $content =  str_replace(">", "&gt;", $content);
+                $content =  str_replace("\n", "<br>", $content);
                 echo "
                     <div class='dialog-content'>
                         <img src='$avatar' alt='头像' width='50' height='50' style='border-radius: 50%;'>
@@ -122,5 +126,3 @@
     </form>
 </body>
 </html>
-<?php
-?>
